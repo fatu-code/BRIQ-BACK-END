@@ -2,8 +2,8 @@
 const BRIK_FEE = 0.06; // your margin
 
 const MATERIALS = [
-  { id: "cem-hima", name: "Cement — Hima", spec: "50kg · OPC 42.5N", group: "Cement", unit: "bag", supplier: 38000, retail: 44000, verified: true },
-  { id: "cem-tororo", name: "Cement — Tororo", spec: "50kg · OPC 42.5N", group: "Cement", unit: "bag", supplier: 36000, retail: 42000, verified: true },
+  { id: "cem-hima", name: "Cement - Hima", spec: "50kg · OPC 42.5N", group: "Cement", unit: "bag", supplier: 38000, retail: 44000, verified: true },
+  { id: "cem-tororo", name: "Cement - Tororo", spec: "50kg · OPC 42.5N", group: "Cement", unit: "bag", supplier: 36000, retail: 42000, verified: true },
   { id: "bar-y10", name: "Iron bar Y10", spec: "10mm deformed · 12m", group: "Steel", unit: "length", supplier: 27000, retail: 32000, verified: true },
   { id: "bar-y12", name: "Iron bar Y12", spec: "12mm deformed · 12m", group: "Steel", unit: "length", supplier: 38000, retail: 44000, verified: true },
   { id: "bar-y16", name: "Iron bar Y16", spec: "16mm deformed · 12m", group: "Steel", unit: "length", supplier: 68000, retail: 78000, verified: true },

@@ -1,7 +1,7 @@
 {
   "name": "brik-backend",
   "version": "1.0.0",
-  "description": "Brik — construction materials coordination API",
+  "description": "Brik - construction materials coordination API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

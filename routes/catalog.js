@@ -12,7 +12,7 @@ const withPricing = (m) => {
   };
 };
 
-// GET /api/materials — full catalogue with Brik pricing
+// GET /api/materials - full catalogue with Brik pricing
 router.get("/materials", asyncHandler(async (req, res) => {
   const { rows } = await pool.query(
     "SELECT * FROM materials WHERE active = true ORDER BY group_name, name"
@@ -20,7 +20,7 @@ router.get("/materials", asyncHandler(async (req, res) => {
   res.json({ fee: BRIK_FEE, materials: rows.map(withPricing) });
 }));
 
-// GET /api/packs — phase bundles
+// GET /api/packs - phase bundles
 router.get("/packs", (req, res) => res.json({ packs: PACKS }));
 
 module.exports = router;

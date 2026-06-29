@@ -5,7 +5,7 @@ const { BRIK_FEE } = require("../db/catalog");
 
 const STATUS = ["Placed", "Confirming", "Out for delivery", "Delivered"];
 
-// GET /api/orders — client's orders with items
+// GET /api/orders - client's orders with items
 router.get("/orders", requireClient, asyncHandler(async (req, res) => {
   const { rows: orders } = await pool.query(
     "SELECT * FROM orders WHERE client_id = $1 ORDER BY created_at DESC",
@@ -28,7 +28,7 @@ router.get("/orders", requireClient, asyncHandler(async (req, res) => {
 }));
 
 // POST /api/orders  { projectId, slot, items: [{id, qty}] }
-// Prices are recomputed server-side from the DB — never trust client totals.
+// Prices are recomputed server-side from the DB - never trust client totals.
 router.post("/orders", requireClient, asyncHandler(async (req, res) => {
   const { projectId, slot, items } = req.body;
   if (!Array.isArray(items) || items.length === 0)
@@ -89,7 +89,7 @@ router.post("/orders", requireClient, asyncHandler(async (req, res) => {
   }
 }));
 
-// PATCH /api/orders/:id/status  { statusIdx }  — operator side moves the order along
+// PATCH /api/orders/:id/status  { statusIdx }  - operator side moves the order along
 router.patch("/orders/:id/status", asyncHandler(async (req, res) => {
   const idx = Number(req.body.statusIdx);
   if (!(idx >= 0 && idx <= 3)) return res.status(400).json({ error: "statusIdx must be 0–3" });
